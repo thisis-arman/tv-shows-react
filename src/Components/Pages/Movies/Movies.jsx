@@ -1,33 +1,33 @@
 import { useEffect, useState } from "react";
-import SingleCard from "./SingleCard";
+import SingleCard from "../HomeCompo/SingleCard";
 
 
-const Cards = () => {
-    const [card, setCard] = useState([])
-
+const Movies = () => {
+    const [movies,setMovies]=useState([])
     useEffect(() => {
         fetch("https://api.tvmaze.com/search/shows?q=all")
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                setCard(data)
+                setMovies(data)
             })
     }, [])
-
-    console.log(card)
     return (
-        <div className="my-12">
-            <h2 className="text-4xl font-bold text-center">Explore TV Shows</h2>
+        <div>
+             <div className="my-24">
+            <h2 className="text-4xl font-bold text-center">All TV Shows</h2>
 
 
             <div className="grid md:grid-cols-2 gap-5 my-24 px-12 mx-auto">
                 {
-                    card.map((item, i) => <SingleCard key={i} item={item}></SingleCard>)
+                    movies.map((item, i) => <SingleCard key={i} item={item}></SingleCard>)
                 }
 
             </div>
         </div>
+            
+        </div>
     );
 };
 
-export default Cards;
+export default Movies;

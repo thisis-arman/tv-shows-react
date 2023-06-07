@@ -8,7 +8,7 @@ const SingleCard = ({ item }) => {
     return (
         <div>
             {/* <h2>ITemsssss</h2> */}
-            <div className="flex lg:card-side bg-base-100 shadow-xl ">
+            <div className="flex lg:card-side bg-base-100 shadow-xl hover:shadow-2xl  hover:shadow-slate-600 hover:border ">
                 <figure><img className="w-full  object-contain" src={image.medium} alt="Album" /></figure>
                 <div className="card-body text-left">
                     <h2 className="text-2xl font-semibold">{name}</h2>
@@ -22,7 +22,7 @@ const SingleCard = ({ item }) => {
                     </p>
                     <div className="card-actions  justify-start">
                      <Link to={`/movie-detail/${id}`}>
-                     <button className="px-12 py-1  text-black font-semibold bg-gradient-to-r from-indigo-300 via-purple-200 to-pink-300">Details</button>
+                     <button className="btn-primary">Details</button>
                      </Link>
                     </div>
                 </div>

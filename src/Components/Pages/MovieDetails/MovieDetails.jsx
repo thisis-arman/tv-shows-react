@@ -13,12 +13,12 @@ const {name,genres,image,language,network,summary,runtime,type,url,_links,rating
     return (
         <div>
            <div>
-<h2 className="font-bold text-4xl">{name}</h2>
+
 
            </div>
-           <section className="text-gray-600 body-font">
-  <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+           <section className="text-gray-600 body-font my-24">
+  <div className="container mx-auto flex px-5 md:flex-row flex-col border p-4 shadow-md items-center">
+    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0  items-center text-center">
       <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
         <br className="hidden lg:inline-block" />readymade gluten
       </h1>
@@ -33,6 +33,7 @@ const {name,genres,image,language,network,summary,runtime,type,url,_links,rating
     </div>
   </div>
 </section>
+
 
            <div>
            <section className="text-gray-600 body-font overflow-hidden">
@@ -62,7 +63,7 @@ const {name,genres,image,language,network,summary,runtime,type,url,_links,rating
         </div>
         <div className="flex border-t border-b mb-6 border-gray-200 py-2">
           <span className="text-gray-500">Ratings</span>
-          <span className="ml-auto text-gray-900">{rating.average ? rating.average:'not available'}</span>
+          <span className="ml-auto text-gray-900">{rating.average ? rating.average :'not available'} /10</span>
         </div>
         <div className="flex">
           <span className="title-font font-medium text-2xl text-gray-900">$58.00</span>

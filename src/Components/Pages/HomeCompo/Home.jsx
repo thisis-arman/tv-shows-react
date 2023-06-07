@@ -1,9 +1,10 @@
 import Cards from "./Cards";
+import Slider from "./Slider";
 
 const Home = () => {
     return (
         <div>
-            <h2>Home</h2>
+           <Slider/>
             <Cards/>
           
         </div>
